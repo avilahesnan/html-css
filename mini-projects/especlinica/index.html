@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>EspeClinica - Clínica</title>
+</head>
+<body>
+    <header>
+        <h1>EspeClinica</h1>
+    </header>
+    <main>
+        <h2>Marcar Consulta</h2>
+        <form action="#">
+            <label for="cpf">CPF do paciente</label>
+            <input type="text" id="cpf"><br>
+            <em>Nome: Francisco Miojo</em><br><br>
+            <label for="especialidade">Especialidade</label>
+            <select id="especialidade">
+                <option value="1">Pediatra</option>
+                <option value="2">Ginecologista</option>
+                <option value="3">Geriatra</option>
+            </select><br>
+            <label for="medico">Médico</label>
+            <select id="medico">
+                <option value="1">Rodrigo</option>
+                <option value="2">Ester</option>
+                <option value="3">Adson</option>
+            </select><br>
+            <label>Data e Hora:</label>
+            <input type="date" id="dataConsulta">
+            <input type="time" id="horaConsulta">
+            <br>
+            <div class="text-center margin-top margin-bottom">
+                <input type="submit" value="Cadastrar">
+            </div>
+        </form>
+    </main>
+    <footer>
+        EspeClinica - Desenvolvido por Turma de CS2 &copy2023;
+    </footer>
+</body>
+</html>
