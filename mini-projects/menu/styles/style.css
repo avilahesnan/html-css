@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
     margin: 0px;
     padding: 0px;
@@ -17,7 +19,7 @@ header > h1 {
     text-align: center;
 }
 
-i#burger {
+i#burguer {
     background-color: rgb(48, 48, 48);
     color: white;
     display: block;
@@ -26,7 +28,7 @@ i#burger {
     cursor: pointer;
 }
 
-i#burger:hover {
+i#burguer:hover {
     background-color: white;
     color: black;
 }

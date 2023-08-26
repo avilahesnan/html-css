@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/media-query.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>Media Query</title>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu site</h1>
-        <i id="burger" class="material-icons" onclick="clickMenu()">menu</i>
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
         <menu id="items">
             <ul>
                 <li><a href="#">Opção 1</a></li>
@@ -24,12 +25,21 @@
     <main>
         <article>
             <h2>Testando Media Queries</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim incidunt beatae ab voluptates modi tempora inventore in quo dolore laborum iusto veritatis est, dolores corporis culpa iure eligendi id earum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas sint aperiam perferendis laborum et, nemo ut ratione tempora nam corporis reiciendis. Laboriosam, optio! Doloremque optio perferendis esse soluta facere?</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit magni ea quod, at non quas ducimus quibusdam doloribus et nostrum, aspernatur nisi voluptatibus! Veritatis atque repudiandae excepturi autem. Officiis, esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus nulla modi explicabo, praesentium alias. Velit quas, earum dolores corrupti odit ipsa minima alias. Sed earum obcaecati saepe quia sit.</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, dolores quae error ex cupiditate eveniet sequi nesciunt beatae et. Reprehenderit vero iure cupiditate obcaecati. Ipsum distinctio voluptates optio deleniti dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolorum rem aperiam, aliquam qui corporis officiis at adipisci cum corrupti labore, distinctio quia reiciendis tempora soluta minima obcaecati. Similique, numquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim incidunt beatae ab voluptates modi tempora inventore in quo dolore laborum iusto veritatis est, dolores corporis culpa iure eligendi id earum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas sint aperiam perferendis laborum et, nemo ut ratione tempora nam corporis reiciendis. Laboriosam, optio! Doloremque optio perferendis esse soluta facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quaerat quis doloribus nisi laborum recusandae vitae deleniti amet laudantium tenetur corrupti, maxime nostrum optio facilis? Quo asperiores facere cumque dicta!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit magni ea quod, at non quas ducimus quibusdam doloribus et nostrum, aspernatur nisi voluptatibus! Veritatis atque repudiandae excepturi autem. Officiis, esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus nulla modi explicabo, praesentium alias. Velit quas, earum dolores corrupti odit ipsa minima alias. Sed earum obcaecati saepe quia sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dicta eaque, veniam animi nemo consequuntur ipsa atque veritatis tempora quos non fugiat aliquid recusandae corporis tenetur. Ex error eaque sint!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, dolores quae error ex cupiditate eveniet sequi nesciunt beatae et. Reprehenderit vero iure cupiditate obcaecati. Ipsum distinctio voluptates optio deleniti dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolorum rem aperiam, aliquam qui corporis officiis at adipisci cum corrupti labore, distinctio quia reiciendis tempora soluta minima obcaecati. Similique, numquam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure aliquid ullam consequuntur eos magni, rem quod doloribus ea ipsa officiis dolor dolorem. Recusandae ipsam accusantium eos voluptatibus, ex dicta voluptate.</p>
         </article>
     </main>
     <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                items.style.display = 'block'
+            }
+            else {
+                items.style.display = 'none'
+            }
+        }
+
         function clickMenu() {
             if (items.style.display == 'block') {
                 items.style.display = 'none'
