@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+:root {
+    --cor1: #252935;
+    --cor2: #6B3360;
+    --cor3: #794590;
+    --cor4: #68599E;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -8,7 +15,7 @@
 }
 
 html, body {
-    background-color: #543673;
+    background-color: var(--cor3);
     height: 100vh;
     width: 100vw;
 }
@@ -23,20 +30,20 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
     background-color: white;
     width: 250px;
     height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+    transform: translate(-50%, -50%);
     transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
 
 div#image {
     display: block;
-    background: #543673 url('../images/night.jpg') no-repeat;
+    background: var(--cor3) url('../images/night.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
     height: 200px;
@@ -56,15 +63,41 @@ div#form > p {
     font-size: 0.8em;
 }
 
-div.box-form {
-    background-color: #543673;
+div.form-box {
+    background-color: var(--cor2);
+    border: 2px solid var(--cor2);
+    display: block;
+    width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
-label {
+div.form-box > label {
     display: none;
+
+}
+
+div.form-box > i {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.form-box > input {
+    background-color: #a48cfa;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-11px);
+}
+
+div.form-box > input:focus-within {
+    background-color: white;
 }
 
 form > input[type=submit] {
@@ -72,15 +105,15 @@ form > input[type=submit] {
     font-size: 1em;
     width: 100%;
     height: 40px;
-    background-color:#8555b4;
-    color: #1B2624;
+    background-color:var(--cor2);
+    color: var(--cor1);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 form > input[type=submit]:hover {
-    background-color:#1B2624;
-    color: white;
+    background-color:var(--cor4);
+    color: var(--cor1);
 }
 
 a.btn {
@@ -92,14 +125,14 @@ a.btn {
     padding-top: 5px;
     margin-top: 5px;
     background-color: white;
-    color: #1B2624;
+    color: var(--cor1);
     border: 1px solid ;
     border-radius: 5px;
     text-decoration: none;
 }
 
 a.btn:hover {
-    background-color: #1B2624;
+    background-color: var(--cor1);
     color: white;
 }
 
