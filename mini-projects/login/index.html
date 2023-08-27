@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media-query.css">
     <title>Login</title>
@@ -21,7 +22,20 @@
                     Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.
                 </p>
                 <form action="login.php" method="post">
-
+                    <div class="form-box">
+                        <i class="material-icons">person</i>
+                        <input type="email" name="login" id="login" placeholder="email" required autocomplete="email">
+                        <label for="login">E-mail</label>
+                    </div>
+                    <div class="form-box">
+                        <i class="material-icons">vpn_key</i>
+                        <input type="password" name="password" id="password" placeholder="senha" required minlength="8" maxlength="16" autocomplete="current-password">
+                        <label for="password">Senha</label>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html">
+                        Esquecia minha senha <i class="material-icons">mail</i>
+                    </a>
                 </form>
             </div>
         </section>
