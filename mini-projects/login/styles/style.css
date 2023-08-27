@@ -98,6 +98,7 @@ div.form-box > input {
 
 div.form-box > input:focus-within {
     background-color: white;
+    outline: none;
 }
 
 form > input[type=submit] {
