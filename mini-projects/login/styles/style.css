@@ -88,12 +88,12 @@ div.form-box > i {
 div.form-box > input {
     background-color: #a48cfa;
     font-size: 1em;
-    width: calc(100% - 45px);
+    width: calc(100% - 44.5px);
     height: 100%;
     border: 0px;
     border-radius: 8px;
     padding: 4px;
-    transform: translateY(-11px);
+    transform: translateY(-13px);
 }
 
 div.form-box > input:focus-within {
