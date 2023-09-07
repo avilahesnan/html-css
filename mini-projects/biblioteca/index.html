@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Biblioteca</title>
 </head>
 <body>
     <nav class="navbar bg-dark navbar-dark">
-        <a class="navbar-brand" href="index.html">Home</a>
+        <a class="navbar-brand" href="index.html"><i class="fa-solid fa-book"></i>Biblioteca</a>
     </nav>
-    <main class="container-fluid">
-        <h1>Biblioteca</h1>
-        <p>Seja bem-vindo à nossa biblioteca!</p>
-    </main>
+    <section class="row col-12">
+        <main id="image" class="col-md-9">
+            <p>Seja bem-vindo à nossa biblioteca!</p>
+            <img class="img-thumbnail" src="images/library.jpg" alt="library">
+            <div class="row">
+                <div id="book1" class="bg-light border-lightgray col-12 col-md-4">
+                </div>
+                <div id="book2" class="bg-light border-lightgray col-12 col-md-4">
+                </div>
+                <div id="book3" class="bg-light border-lightgray col-12 col-md-4">
+                </div>
+            </div>
+        </main>
+        <aside class="col-md-3">
+            <h2>Livros Recentes</h2>
+            <p>Aqui exibiremos a lista de livros recente</p>
+        </aside>
+    </section>
     <footer class="container-fluid">
-        <p>&copy;<a href="https://github.com/avilahesnan">Hesnan Ávila</a> 2023</p>
+        <p>
+            &copy;<a href="https://github.com/avilahesnan"><i class="fa-brands fa-github fa-bounce"></i>Hesnan Ávila</a>
+            2023
+        </p>
     </footer>
 
     <script src="js/popper.js"></script>

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.border-lightgray {
+    border: solid 1px lightgray;
+}
+
+div#book1 {
+    background: black url(../images/book1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+}
+
+div#book2 {
+    background: black url(../images/book2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+}
+
+div#book3 {
+    background: black url(../images/book3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+}
