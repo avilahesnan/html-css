@@ -12,6 +12,8 @@ div#book1 {
     background-size: cover;
     background-position: center center;
     height: 300px;
+    width: 330px;
+    margin-left: 5px;
 }
 
 div#book2 {
@@ -19,6 +21,7 @@ div#book2 {
     background-size: cover;
     background-position: center center;
     height: 300px;
+    width: 330px;
 }
 
 div#book3 {
@@ -26,4 +29,5 @@ div#book3 {
     background-size: cover;
     background-position: center center;
     height: 300px;
+    width: 330px;
 }
