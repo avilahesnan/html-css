@@ -10,26 +10,104 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-        <a class="navbar-brand" href="index.html"><i class="fa-solid fa-book"></i>Biblioteca</a>
+        <a class="navbar-brand" href="index.html">
+            <i class="fa fa-book"></i>
+            Biblioteca
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarCollapse" class="navbar-collapse collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="meus-emprestimos.html">Meus Empréstimos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Pesquisar Livros</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="programacao.html">Programação</a>
+                        <a class="dropdown-item" href="arte-grafica.html">Arte Gráfica</a>
+                        <a class="dropdown-item" href="musica.html">Música</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-envelope"></i>
+                        Notificações
+                        <i class="badge bg-secondary">4</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <section class="row col-12">
-        <main id="image" class="col-md-9">
+
+    <div class="row">
+        <main class="col-md-9">
+
             <p>Seja bem-vindo à nossa biblioteca!</p>
-            <img class="img-thumbnail" src="images/library.jpg" alt="library">
+    
+            <a href="https://facebook.com/biblioteca">
+                <i class="fa-brands fa-square-facebook"></i>
+                Biblioteca
+            </a>
+    
+            <img class="img-thumbnail" src="https://trecobox.com.br/wp-content/uploads/2022/09/Todos-os-personagens-de-O-Senhor-dos-Aneis-em-Os-Aneis-de-Poder.jpg">
+    
             <div class="row">
-                <div id="book1" class="bg-light border-lightgray col-12 col-md-4">
+                <div class="bg-light border-gray color-black col-12 col-md-4">
+                    O Senhor dos Anéis 1 - A Sociedade do Anel
+                    <button type="button" class="btn btn-primary" onmousedown="prepararJanela('O Senhor dos Anéis 1 - A Sociedade do Anel', 'https://www.youtube.com/embed/znzi5_kCEtU')"
+                    data-bs-toggle="modal" data-bs-target="#janelaModal">
+                        Abrir Janela
+                    </button>
                 </div>
-                <div id="book2" class="bg-light border-lightgray col-12 col-md-4">
+        
+                <div class="bg-light border-gray color-black col-12 col-md-4">
+                    O Senhor dos Anéis 2 - As Duas Torres
+                    <button type="button" class="btn btn-primary" onmousedown="prepararJanela('O Senhor dos Anéis 2 - As Duas Torres', 'https://www.youtube.com/embed/nmbsFeJ5EA0')"
+                    data-bs-toggle="modal" data-bs-target="#janelaModal">
+                        Abrir Janela
+                    </button>
                 </div>
-                <div id="book3" class="bg-light border-lightgray col-12 col-md-4">
+        
+                <div class="bg-light border-gray color-black col-12 col-md-4">
+                    O Senhor dos Anéis 3 - O Retorno do Rei
+                    <button type="button" class="btn btn-primary" onmousedown="prepararJanela('O Senhor dos Anéis 3 - O Retorno do Rei', 'https://www.youtube.com/embed/CaimcEcFuMg')"
+                    data-bs-toggle="modal" data-bs-target="#janelaModal">
+                        Abrir Janela
+                    </button>
                 </div>
             </div>
+        
         </main>
+    
         <aside class="col-md-3">
-            <h2>Livros Recentes</h2>
-            <p>Aqui exibiremos a lista de livros recente</p>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Livros Recentes</h3>
+                </div>
+                <p>Uma Breve História sobre o Tempo</p>
+                <p>Marketing 4.0</p>
+                <p>A Hora da Estrela</p>
+                <p>As Crônicas de Nárnia</p>
+            </div>
         </aside>
-    </section>
+    </div>
+
+    <div class="modal fade" id="janelaModal">
+        <div class="modal-dialog modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="tituloJanela">Título da janela</h4>
+                <button type="button" class="close" 
+                data-bs-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="iframeJanela" width="460" height="360" src="https://www.youtube.com/embed/znzi5_kCEtU" title="O Senhor Dos Anéis Dublado - A Sociedade Do Anel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
     <footer class="container-fluid">
         <p>
             &copy;<a href="https://github.com/avilahesnan"><i class="fa-brands fa-github fa-bounce"></i>Hesnan Ávila</a>
@@ -39,5 +117,12 @@
 
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
+    
+    <script>
+        function prepararJanela(titulo, url) {
+            tituloJanela.innerHTML = titulo;
+            iframeJanela.src = url;
+        }
+    </script>
 </body>
 </html>

@@ -3,31 +3,15 @@
 body {
     padding-top: 60px;
 }
-.border-lightgray {
-    border: solid 1px lightgray;
+
+.color-black {
+    color: black;
 }
 
-div#book1 {
-    background: black url(../images/book1.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 300px;
-    width: 330px;
-    margin-left: 5px;
+.border-gray {
+    border: solid 2px gray;
 }
 
-div#book2 {
-    background: black url(../images/book2.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 300px;
-    width: 330px;
-}
-
-div#book3 {
-    background: black url(../images/book3.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 300px;
-    width: 330px;
+.card-header {
+    background-color: lightgray;
 }
