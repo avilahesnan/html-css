@@ -105,6 +105,16 @@
             </div>
         </div>
     </div>
+
+    <div class="div-chat d-none">
+        <textarea class="w-100"></textarea>
+        <br>
+        <button class="btn btn-primary w-100">Enviar</button>
+    </div>
+
+    <div class="btn-suporte">
+        <i class="fa-solid fa-comment fa-beat"></i>
+    </div>
     <footer class="container-fluid">
         <p>
             &copy;<a href="https://github.com/avilahesnan"><i class="fa-brands fa-github fa-bounce"></i>Hesnan Ávila</a>
@@ -112,31 +122,42 @@
         </p>
     </footer>
 
-    <script src="js/jquery-3.7.1.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src='js/popper.js'></script>
+    <script src='js/bootstrap.js'></script>
+    <script src='js/jquery-3.7.1.js'></script>
     
     <script>
+       function aleatorio(N) {
+            return Math.round(Math.random()*N);
+        }
+
         function prepararJanela(titulo, url) {
             tituloJanela.innerHTML = titulo;
             iframeJanela.src = url;
+            $("#janelaModal").css("background-color", 
+            `rgba(${aleatorio(255)}, ${aleatorio(255)}, ${aleatorio(255)}, 0.5)`);
         }
 
         function excluirFavorito(btn) {
-            $(btn).parent().remove()
+            $(btn).parent().remove();
         }
 
         function carregarFavoritos() {
-            $("#divFavoritos").append("<p><button onclick='excluirFavorito(this)'>Excluir</button>Crônicas de Nárnia</p>")
-            $("#divFavoritos").append("<p><button onclick='excluirFavorito(this)'>Excluir</button>Uma Breve História sobre o Tempo</p>")
-            $("#divFavoritos").append("<p><button onclick='excluirFavorito(this)'>Excluir</button>Marketing 4.0</p>")
-            $("#divFavoritos").append("<p><button onclick='excluirFavorito(this)'>Excluir</button>A Hora da Estrela</p>")
+            $("#divFavoritos").append("<p><button onclick='excluirFavorito(this)'>Excluir</button>Crônicas de Nárnia</p>");
+            $("#divFavoritos").append("<p><button onclick='excluirFavorito(this)'>Excluir</button>Marketing 4.0</p>");
+            $("#divFavoritos").append("<p><button onclick='excluirFavorito(this)'>Excluir</button>Uma Breve História sobre o Tempo</p>");
+            $("#divFavoritos").append("<p><button onclick='excluirFavorito(this)'>Excluir</button>A Hora da Estrela</p>");
         }
 
+        //Código que executa após o carregamento da página
         $(() => {
-            //$("footer").hide()
-            carregarFavoritos()
-        })
+            //$("footer").hide();
+            carregarFavoritos();
+
+            $(".btn-suporte").click(() => {
+                $(".div-chat").toggleClass("d-none");
+            });
+        });
     </script>
 </body>
 </html>
