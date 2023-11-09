@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "nome": "O Senhor dos Anéis 1 - A Sociedade do Anel",
+        "video": "https://www.youtube.com/embed/znzi5_kCEtU"
+    },
+    {
+        "id": 2,
+        "nome": "O Senhor dos Anéis 2 - As Duas Torres",
+        "video": "https://www.youtube.com/embed/nmbsFeJ5EA0"
+    },
+    {
+        "id": 3,
+        "nome": "O Senhor dos Anéis 3 - O Retorno do Rei",
+        "video": "https://www.youtube.com/embed/CaimcEcFuMg"
+    }
+]

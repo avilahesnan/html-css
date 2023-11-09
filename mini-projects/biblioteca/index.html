@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Biblioteca</title>
+    <link rel='stylesheet' href='css/bootstrap.css'>
+    <link rel='stylesheet' href='css/estilo.css'>
 </head>
 <body>
 
@@ -22,30 +24,7 @@
     
             <img class="img-thumbnail" src="https://trecobox.com.br/wp-content/uploads/2022/09/Todos-os-personagens-de-O-Senhor-dos-Aneis-em-Os-Aneis-de-Poder.jpg">
     
-            <div class="row">
-                <div class="bg-light border-gray color-black col-12 col-md-4">
-                    O Senhor dos Anéis 1 - A Sociedade do Anel
-                    <button type="button" class="btn btn-primary" onmousedown="prepararJanela('O Senhor dos Anéis 1 - A Sociedade do Anel', 'https://www.youtube.com/embed/znzi5_kCEtU')"
-                    data-bs-toggle="modal" data-bs-target="#janelaModal">
-                        Abrir Janela
-                    </button>
-                </div>
-        
-                <div class="bg-light border-gray color-black col-12 col-md-4">
-                    O Senhor dos Anéis 2 - As Duas Torres
-                    <button type="button" class="btn btn-primary" onmousedown="prepararJanela('O Senhor dos Anéis 2 - As Duas Torres', 'https://www.youtube.com/embed/nmbsFeJ5EA0')"
-                    data-bs-toggle="modal" data-bs-target="#janelaModal">
-                        Abrir Janela
-                    </button>
-                </div>
-        
-                <div class="bg-light border-gray color-black col-12 col-md-4">
-                    O Senhor dos Anéis 3 - O Retorno do Rei
-                    <button type="button" class="btn btn-primary" onmousedown="prepararJanela('O Senhor dos Anéis 3 - O Retorno do Rei', 'https://www.youtube.com/embed/CaimcEcFuMg')"
-                    data-bs-toggle="modal" data-bs-target="#janelaModal">
-                        Abrir Janela
-                    </button>
-                </div>
+            <div class="row" id="divLivros">
             </div>
         
         </main>
@@ -82,11 +61,18 @@
     <div class="btn-suporte">
         <i class="fa-solid fa-comment fa-beat"></i>
     </div>
-    
 
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery-3.7.1.js"></script>
-    <script src="js/script.js"></script>
+
+
+
+    <script src='js/popper.js'></script>
+    <script src='js/bootstrap.js'></script>
+    <script src='js/jquery-3.7.1.js'></script>
+
+    <script src='js/main.js'></script>
+
+    <script>
+        carregarLivros();
+    </script>
 </body>
 </html>
