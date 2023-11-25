@@ -10,7 +10,9 @@ function prepararJanela(titulo, url) {
 }
 
 function excluirFavorito(btn) {
-    $(btn).parent().remove();
+    if (confirm('Você realmente quer apagar esse item?')) {
+        $(btn).parent().remove();
+    }
 }
 
 function carregarFavoritos() {
@@ -67,14 +69,30 @@ function efetuarLogin(e) {
     });
 }
 
+function efetuarLogout(e) {
+    usuarioLogado = null;
+    localStorage.clear();
+}
+
 function carregarUsuario() {
     usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+}
+
+function requerNivel(nivel) {
+    //console.log(`requerNivel(${nivel})`);
+    //console.log(`Usuário: ${usuarioLogado}`);
+    if (!usuarioLogado || usuarioLogado.nivel < nivel) {
+        //location.href = "login.html";
+        location.assign("login.html");
+    }
 }
 
 let usuarioLogado = null;
 
 //Código que executa após o carregamento da página
 $(() => {
+    carregarUsuario();
+
     carregarFavoritos();
 
     $(".btn-suporte").click(() => {
