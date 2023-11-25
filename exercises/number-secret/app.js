@@ -1,12 +1,12 @@
 alert('Bem-vindo ao site!');
-let numberSecret = 5;
+let numberMax = 100;
+let numberSecret = parseInt(Math.random() * numberMax + 1);
 let kick;
 let trys = 1;
 
-
 while (kick != numberSecret) {
     
-    kick = prompt('Informe um número?')
+    kick = prompt(`Informe um número entre 1 e ${numberMax}`);
 
     if (kick == numberSecret) {
         break;
@@ -18,10 +18,9 @@ while (kick != numberSecret) {
             alert(`O número secreto é maior que ${kick}`);
         }
 
-        trys++
+        trys++;
     }
 
-    
 }
 
 let wordTry = trys > 1 ? 'tentativas' : 'tentativa';
