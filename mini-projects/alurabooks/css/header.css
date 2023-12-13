@@ -1,7 +1,7 @@
 .header-menu-burger {
     width: 24px;
     height: 24px;
-    background-image: url();
+    background-image: url(../assets/Menu.svg);
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
@@ -24,12 +24,36 @@
     padding: 1rem;
 }
 
+.container-btn {
+    display: none;
+}
+
 .list-menu {
     display: none;
     position: absolute;
     top: 100%;
+    width: 60vw;
 }
 
 .container-btn:checked ~ .list-menu {
     display: block;
+}
+
+.list-menu-title,
+.list-menu-item {
+    padding: 1rem;
+    background-color: var(--color-white);
+}
+
+.list-menu-title {
+    color: var(--color-orange);
+    font-weight: 700;
+}
+
+.list-menu-link {
+    background: var(--color-blue-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;  
 }
