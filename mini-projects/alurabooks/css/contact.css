@@ -35,3 +35,25 @@
     background: url(../assets/Email.svg) no-repeat;
     padding-left: 2rem;
 }
+
+@media screen and (min-width: 1024px) {
+    
+    .contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-description {
+        margin-right: 1rem;
+    }
+
+    .contact-title {
+        font-size: 24px;
+        width: 30%;
+    }
+
+    .contact-email {
+        width: 30%;
+    }
+}

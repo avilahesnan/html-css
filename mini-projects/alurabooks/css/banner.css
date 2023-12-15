@@ -33,3 +33,18 @@
     background: url(../assets/Lupa.svg) no-repeat;
     background-position: 1rem;
 }
+
+@media screen and (min-width: 1024px) {
+    
+    .banner-title {
+        font-size: 36px;
+    }
+
+    .banner-search {
+        width: 50%;
+    }
+
+    .banner-search::placeholder {
+        background-position: 7rem;
+    }
+}
