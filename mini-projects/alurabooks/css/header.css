@@ -38,6 +38,14 @@
     width: 60vw;
 }
 
+.container-btn:checked ~ .container-label > .header-menu-burger {
+    background-image: url(../assets/Menu\ Aberto.svg);
+}
+
+.container-btn:checked ~ .container-label {
+    background: var(--color-blue-gradient);
+}
+
 .container-btn:checked ~ .list-menu {
     display: block;
 }
@@ -88,13 +96,27 @@
         display: flex;
     }
 
+    .options-buttons:checked ~ .options-label > .options-item {
+        background: var(--color-blue-gradient);
+        color: var(--color-white);
+    }
+
     .options-buttons:checked ~ .list-menu {
         display: block;
         width: auto;
     }
 
+    .list-menu-item:hover {
+        background: var(--color-blue-gradient);
+    }
+
+    .list-menu-item:hover > .list-menu-link {
+        -webkit-text-fill-color: var(--color-white);
+        text-decoration: none;
+    }
+
     .options-item {
-        padding: 0 1rem;
+        padding: 2rem 1rem;
         text-transform: uppercase;
     }
 
