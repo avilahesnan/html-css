@@ -145,3 +145,36 @@ body {
     color: var(--color-secundary);
     font-size: 14px;
 }
+
+@media screen and (max-width: 768px) {
+    
+    .container {
+        display: block;
+        background-image: none;
+    }
+
+    .container-img {
+        width: 50vw;
+    }
+
+    .container-box {
+        margin: 2rem 2rem;
+    }
+
+    .secundary {
+        margin: 0;
+        text-align: center;
+    }
+
+    .secundary-img {
+        width: 50vw;
+    }
+
+    .devices-list {
+        display: block;
+    }
+
+    .footer-list {
+        display: block;
+    }
+}
