@@ -1,12 +1,17 @@
 function playSound (idElement) {
-    document.querySelector(idElement).play();
+    const element = document.querySelector(idElement);
+ 
+    if (element && element.localName === 'audio') {
+        element.play();
+    } else {
+        console.log('Elemento não encontrado ou seletor inválido.');
+    }
+    
 }
 
 const listSounds = document.querySelectorAll('.tecla');
 
-let count = 0;
-
-while (count < listSounds.length) {
+for (let count = 0; count < listSounds.length; count++) {
 
     const sounds = listSounds[count];
     const sound = sounds.classList[1];
@@ -16,6 +21,14 @@ while (count < listSounds.length) {
     sounds.onclick = function () {
         playSound(idSound);
     }
-    
-    count++;
+
+    sounds.onkeydown = function (e) {
+        if (e.code === 'Enter' || e.code === 'Space') {
+            sounds.classList.add('ativa');
+        }
+    }
+
+    sounds.onkeyup = function () {
+        sounds.classList.remove('ativa');
+    }
 }
