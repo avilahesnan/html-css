@@ -12,13 +12,16 @@ const startOrPauseBtn = document.querySelector('#start-pause span');
 const audioPlay = new Audio('sons/play.wav');
 const audioPause = new Audio('sons/pause.mp3');
 const audioTimeFinalized = new Audio('sons/beep.mp3');
+const screenTime = document.querySelector('#timer');
+const icon = document.querySelector('.app__card-primary-butto-icon');
 
-let elapsedTimeSeconds = 5;
+let elapsedTimeSeconds = 1500;
 let intervalId = null;
 
 music.loop = true;
 
 function alterContext(context) {
+    showTime();
     buttons.forEach(function (context) {
         context.classList.remove('active');
     })
@@ -43,11 +46,13 @@ function startOrPause() {
     if (intervalId) {
         audioPause.play();
         zero();
+        icon.setAttribute('src', `imagens/play_arrow.png`);
         return;
     }
     audioPlay.play();
     intervalId = setInterval(countdown, 1000);
     startOrPauseBtn.textContent = "Pausar";
+    icon.setAttribute('src', `imagens/pause.png`);
 }
 
 function zero() {
@@ -56,13 +61,21 @@ function zero() {
     startOrPauseBtn.textContent = "Começar";
 }
 
+function showTime() {
+    const time = new Date(elapsedTimeSeconds * 1000);
+    const timeFormated = time.toLocaleTimeString('pt-br', {minute: '2-digit', second: '2-digit'});
+    screenTime.innerHTML = `${timeFormated}`;
+
+}
+
 const countdown = () => {
     if(elapsedTimeSeconds <= 0) {
         audioTimeFinalized.play();
         zero();
         return;
     }
-    elapsedTimeSeconds -= 1
+    elapsedTimeSeconds -= 1;
+    showTime();
 }
 
 startPauseBtn.addEventListener('click', startOrPause);
@@ -72,16 +85,21 @@ musicFocusInput.addEventListener('change', () => {
 });
 
 focusBtn.addEventListener('click', () => {
+    elapsedTimeSeconds = 1500;
     alterContext('foco');
     focusBtn.classList.add('active');
 });
 
 shortBtn.addEventListener('click', () => {
+    elapsedTimeSeconds = 300;
     alterContext('descanso-curto');
     shortBtn.classList.add('active');
 });
 
 longBtn.addEventListener('click', () => {
+    elapsedTimeSeconds = 900;
     alterContext('descanso-longo');
     longBtn.classList.add('active');
 });
+
+showTime();
