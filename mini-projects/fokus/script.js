@@ -15,7 +15,7 @@ const audioTimeFinalized = new Audio('sons/beep.mp3');
 const screenTime = document.querySelector('#timer');
 const icon = document.querySelector('.app__card-primary-butto-icon');
 
-let elapsedTimeSeconds = 3;
+let elapsedTimeSeconds = 1500;
 let intervalId = null;
 
 music.loop = true;
@@ -65,7 +65,6 @@ function showTime() {
     const time = new Date(elapsedTimeSeconds * 1000);
     const timeFormated = time.toLocaleTimeString('pt-br', {minute: '2-digit', second: '2-digit'});
     screenTime.innerHTML = `${timeFormated}`;
-
 }
 
 const countdown = () => {
