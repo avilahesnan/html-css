@@ -15,7 +15,7 @@ const audioTimeFinalized = new Audio('sons/beep.mp3');
 const screenTime = document.querySelector('#timer');
 const icon = document.querySelector('.app__card-primary-butto-icon');
 
-let elapsedTimeSeconds = 1500;
+let elapsedTimeSeconds = 3;
 let intervalId = null;
 
 music.loop = true;
@@ -71,6 +71,11 @@ function showTime() {
 const countdown = () => {
     if(elapsedTimeSeconds <= 0) {
         audioTimeFinalized.play();
+        const focusActive = html.getAttribute('data-contexto') == 'foco'; 
+        if (focusActive) {
+            const event = new CustomEvent('FocusFinalized');
+            document.dispatchEvent(event);
+        }
         zero();
         return;
     }
