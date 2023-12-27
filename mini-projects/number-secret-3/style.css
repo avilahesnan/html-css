@@ -25,6 +25,10 @@ h1 {
     font-size: 5rem;
 }
 
+h2 {
+    font-size: 4rem;
+}
+
 h3 {
     font-size: 3rem;
     margin-top: 20px
@@ -41,4 +45,12 @@ h3 {
     font-size: 4rem;
     padding: 10px;
     margin: 20px;
+}
+
+.btn-play {
+    padding: 8px 15px;
+    border: 0;
+    background: var(--secundary-color);
+    border-radius: 5px;
+    margin-top: 20px;
 }

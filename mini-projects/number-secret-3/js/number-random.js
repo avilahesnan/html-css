@@ -10,3 +10,5 @@ function generatorNumberRandom() {
 
 elementHighestValue.innerHTML = highestValue;
 elementLowestValue.innerHTML = lowestValue;
+
+console.log(numberSecret);
